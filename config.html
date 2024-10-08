@@ -1,74 +1,137 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuração</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Empodera</h1>
-        <span id="subtext">NET</span>
-    </header>
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #260B4D; /* Fundo principal da página */
+    color: #FFFFFF;
+}
 
-    <main>
-        <div class="config-card">
-            <div class="config-item">
-                <h2>Página de Configuração</h2>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="config-item">
-                <h2>Página de Configuração</h2>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="config-item">
-                <h2>Página de Configuração</h2>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="config-item">
-                <h2>Página de Configuração</h2>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="config-item">
-                <h2>Página de Configuração</h2>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="config-item">
-                <h2>Página de Configuração</h2>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-        </div>
-    </main>
+/* Cabeçalho com efeito brilhante */
+header {
+    text-align: center;
+    background-color: #260B4D; /* Cor de fundo */
+    padding: 20px;
+    font-size: 2.5em;
+    color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.7), 
+                 0 0 30px rgba(255, 0, 255, 1); /* Efeito de brilho roxo claro/rosa */
+}
 
-    <nav class="bottom-nav">
-        <button class="icon-btn">
-            <img src="config-icon.png" class="icon active-icon" alt="Configuração">
-        </button>
-        <button class="icon-btn">
-            <img src="home-icon.png" class="icon" alt="Home">
-        </button>
-        <button class="icon-btn">
-            <img src="profile-icon.png" class="icon" alt="Perfil">
-        </button>
-    </nav>
-</body>
-</html>
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h1 span {
+    color: #FFFFFF; /* O 'NET' também parece branco */
+}
+
+h1#subtext {
+    font-size: 1em;
+    margin-top: -10px;
+}
+
+/* Estilos principais */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.card {
+    background-color: #481F74; /* Fundo dos cartões */
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 15px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    background-color: #6B269B; /* Cor do título dos eventos */
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background-color: #A44ADB; /* Cor dos botões */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card button:hover {
+    transform: scale(1.05); /* Efeito de hover */
+}
+
+/* Navegação inferior */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #4A287C; /* Cor da barra de navegação */
+    padding: 10px 0;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.active-icon {
+    transform: scale(1.3); /* Ícone da página ativa */
+}
+
+.icon-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilo da página ativa */
+.icon-btn.active img {
+    transform: scale(1.3); /* Aumenta o ícone da página ativa */
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6B269B;
+    border-radius: 10px;
+}
+
