@@ -134,3 +134,12 @@ main {
     background-color: #6B269B;
     border-radius: 10px;
 }
+
+
+.profile-card img {
+    width: 80px; /* Ajuste a largura para o tamanho desejado */
+    height: 80px; /* Ajuste a altura para o tamanho desejado */
+    border-radius: 50%; /* Mantém a forma circular */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+}
+
