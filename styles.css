@@ -15,7 +15,7 @@ header {
     font-size: 2.5em;
     color: #FFFFFF;
     text-shadow: 0 0 15px rgba(255, 0, 255, 0.7), 
-                 0 0 30px rgba(255, 0, 255, 1); /* Efeito de brilho roxo claro/rosa */
+                 0 0 30px rgba(255, 0, 255, 1); /* Efeito de brilho */
 }
 
 h1 {
@@ -23,11 +23,7 @@ h1 {
     margin: 0;
 }
 
-h1 span {
-    color: #FFFFFF; /* O 'NET' também parece branco */
-}
-
-h1#subtext {
+#subtext {
     font-size: 1em;
     margin-top: -10px;
 }
@@ -40,53 +36,77 @@ main {
     align-items: center;
 }
 
-.event-card {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
-    width: 80%;
-}
-
-.card {
-    background-color: #481F74; /* Fundo dos cartões */
-    border-radius: 20px;
+.config-card {
     width: 100%;
+}
+
+.config-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #481F74;
+    border-radius: 20px;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin-bottom: 15px;
-}
-
-.card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card h2 {
+.config-item h2 {
     font-size: 1.2em;
-    background-color: #6B269B; /* Cor do título dos eventos */
-    padding: 5px;
-    border-radius: 15px;
-    margin-bottom: 15px;
 }
 
-.card button {
-    background-color: #A44ADB; /* Cor dos botões */
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 1.2em;
+/* Switch de configuração */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
     cursor: pointer;
-    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
 }
 
-.card button:hover {
-    transform: scale(1.05); /* Efeito de hover */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50; /* Verde para o estado ativo */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:not(:checked) + .slider {
+    background-color: #F44336; /* Vermelho para o estado inativo */
+}
+
+input:not(:checked) + .slider:before {
+    transform: translateX(0px);
 }
 
 /* Navegação inferior */
@@ -114,24 +134,3 @@ main {
 .active-icon {
     transform: scale(1.3); /* Ícone da página ativa */
 }
-
-.icon-btn img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Estilo da página ativa */
-.icon-btn.active img {
-    transform: scale(1.3); /* Aumenta o ícone da página ativa */
-}
-
-/* Scrollbar estilizada */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #6B269B;
-    border-radius: 10px;
-}
-
