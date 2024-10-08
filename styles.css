@@ -3,97 +3,74 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #260B4D; /* Fundo principal da página */
+    background-color: #321450; /* Fundo principal da página */
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente o conteúdo */
 }
 
-/* Cabeçalho com efeito brilhante */
+/* Cabeçalho */
 header {
     text-align: center;
-    background-color: #260B4D; /* Cor de fundo */
+    background-color: #321450; /* Cor de fundo do cabeçalho */
     padding: 20px;
     font-size: 2.5em;
     color: #FFFFFF;
-    text-shadow: 0 0 15px rgba(255, 0, 255, 0.7), 
-                 0 0 30px rgba(255, 0, 255, 1); /* Efeito de brilho roxo claro/rosa */
 }
 
 h1 {
     font-size: 2.5em;
-    margin: 0;
 }
 
 h1 span {
-    color: #FFFFFF; /* O 'NET' também parece branco */
-}
-
-h1#subtext {
-    font-size: 1em;
-    margin-top: -10px;
+    color: #EFD921; /* Cor do destaque 'NET' */
 }
 
 /* Estilos principais */
 main {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente os itens no main */
 }
 
-/* Responsividade do cartão */
 .event-card {
     display: flex;
-    justify-content: center; /* Centraliza os cartões */
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 1200px; /* Limita a largura máxima para telas grandes */
-    padding: 10px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background-color: #481F74; /* Fundo dos cartões */
-    border-radius: 20px;
-    width: 100%;
-    max-width: 400px; /* Limita o tamanho máximo dos cartões */
+    background-color: #48277B; /* Fundo dos cartões */
+    border-radius: 10px;
+    width: 30%;
     padding: 20px;
+    margin: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin-bottom: 15px;
-}
-
-.card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
 
 .card h2 {
-    font-size: 1.2em;
-    background-color: #6B269B; /* Cor do título dos eventos */
-    padding: 5px;
-    border-radius: 15px;
-    margin-bottom: 15px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .card button {
-    background-color: #A44ADB; /* Cor dos botões */
-    color: #FFFFFF;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #EFD921; /* Cor do botão */
+    color: #321450;
     border: none;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 1.2em;
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
     transition: transform 0.2s;
 }
 
 .card button:hover {
-    transform: scale(1.05); /* Efeito de hover */
+    transform: scale(1.05); /* Efeito de hover no botão */
 }
 
 /* Navegação inferior */
@@ -102,15 +79,14 @@ main {
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza os ícones da barra de navegação */
-    background-color: #4A287C; /* Cor da barra de navegação */
+    justify-content: space-around;
+    background-color: #4A287C; /* Cor do rodapé */
     padding: 10px 0;
 }
 
 .icon-btn {
     background: none;
     border: none;
-    margin: 0 15px; /* Adiciona margem entre os ícones */
 }
 
 .icon {
@@ -120,89 +96,68 @@ main {
 }
 
 .active-icon {
-    transform: scale(1.3); /* Ícone da página ativa */
+    transform: scale(1.3); /* Aumenta o tamanho do ícone ativo */
 }
 
-.icon-btn img {
+.icon-btn a img {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
-/* Estilo da página ativa */
-.icon-btn.active img {
-    transform: scale(1.3); /* Aumenta o ícone da página ativa */
+/* Estilo da página de configurações */
+.settings-page {
+    padding: 20px;
+    text-align: center;
 }
 
-/* Scrollbar estilizada */
-::-webkit-scrollbar {
-    width: 8px;
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #6B269B;
+.toggle {
+    width: 60px;
+    height: 30px;
+}
+
+/* Estilo da página de perfil */
+.profile-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-card {
+    background-color: #48277B; /* Cor do fundo do cartão de perfil */
     border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
 
-/* Media queries para responsividade */
-@media (max-width: 768px) {
-    header {
-        font-size: 1.8em;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
-    h1#subtext {
-        font-size: 0.9em;
-    }
-
-    .event-card {
-        width: 100%;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    .card img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .card button {
-        font-size: 1em;
-        padding: 8px 16px;
-    }
+.profile-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
-@media (max-width: 480px) {
-    header {
-        font-size: 1.5em;
-        padding: 10px;
-    }
+.profile-info p {
+    margin: 10px 0;
+}
 
-    h1 {
-        font-size: 1.5em;
-    }
+.logout-btn {
+    background-color: #EFD921; /* Cor do botão de logout */
+    color: #321450;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
 
-    h1#subtext {
-        font-size: 0.8em;
-    }
-
-    .card img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .card button {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-
-    .icon {
-        width: 30px;
-        height: 30px;
-    }
+.logout-btn:hover {
+    transform: scale(1.05);
 }
