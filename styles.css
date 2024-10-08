@@ -1,154 +1,56 @@
-/* Estilos Globais */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #4b0082;
+    background-color: #5C2F91; /* Cor de fundo da página */
     color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 }
 
-header h1 {
+header {
     text-align: center;
-    font-size: 32px;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.main {
     padding: 20px;
 }
 
-header h1 span {
-    color: #ff69b4;
-}
-
-/* Estilo das seções */
-main {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-}
-
-.event-card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.card {
-    background-color: #800080;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-}
-
-.card h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.card img {
-    width: 100px;
-    height: 100px;
-}
-
-button {
-    background-color: #ff69b4;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button.logout-btn {
-    background-color: #ff69b4;
-    margin-top: 20px;
-    width: 100%;
-}
-
-/* Estilo da página de Configurações */
-.settings-page {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.toggle-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #800080;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.toggle {
-    appearance: none;
-    width: 50px;
-    height: 25px;
-    background-color: red;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s;
-}
-
-.toggle:checked {
-    background-color: green;
-}
-
-.toggle::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-.toggle:checked::before {
-    transform: translateX(25px);
-}
-
-/* Estilo da página de Perfil */
-.profile-card {
-    background-color: #800080;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.profile-info p {
-    margin: 10px 0;
-}
-
-/* Navegação inferior com botões de imagem */
 .bottom-nav {
     display: flex;
     justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #4b0082;
+    background-color: #5C2F91;
     padding: 10px 0;
 }
 
 .icon-btn {
     background: none;
     border: none;
-    padding: 0;
-    cursor: pointer;
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .active-icon {
-    width: 50px;
-    height: 50px;
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ativo */
+    transition: transform 0.2s; /* Transição suave */
+}
+
+.card {
+    background-color: #6C4A8A; /* Cor do cartão */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.profile-card {
+    background-color: #6C4A8A; /* Cor do cartão de perfil */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
 }
