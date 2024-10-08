@@ -3,74 +3,90 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #321450; /* Fundo principal da página */
+    background-color: #260B4D; /* Fundo principal da página */
     color: #FFFFFF;
 }
 
-/* Cabeçalho */
+/* Cabeçalho com efeito brilhante */
 header {
     text-align: center;
-    background-color: #321450; /* Cor de fundo do cabeçalho */
+    background-color: #260B4D; /* Cor de fundo */
     padding: 20px;
     font-size: 2.5em;
     color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                 0 0 30px rgba(239, 217, 33, 0.8); /* Efeito de brilho */
 }
 
 h1 {
     font-size: 2.5em;
+    margin: 0;
 }
 
 h1 span {
-    color: #EFD921; /* Cor do destaque 'NET' */
+    color: #EFD921; /* Cor do 'NET' */
+}
+
+h1#subtext {
+    font-size: 1em;
+    margin-top: -10px;
 }
 
 /* Estilos principais */
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .event-card {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 80%;
 }
 
 .card {
-    background-color: #48277B; /* Fundo dos cartões */
-    border-radius: 10px;
-    width: 30%;
+    background-color: #481F74; /* Fundo dos cartões */
+    border-radius: 20px;
+    width: 100%;
     padding: 20px;
-    margin: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
-}
-
-.card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 15px;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    background-color: #6B269B; /* Cor do título dos eventos */
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .card button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #EFD921; /* Cor do botão */
-    color: #321450;
+    background-color: #A44ADB; /* Cor dos botões */
+    color: #FFFFFF;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1.2em;
     cursor: pointer;
-    font-weight: bold;
     transition: transform 0.2s;
 }
 
 .card button:hover {
-    transform: scale(1.05); /* Efeito de hover no botão */
+    transform: scale(1.05); /* Efeito de hover */
 }
 
 /* Navegação inferior */
@@ -80,7 +96,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #4A287C; /* Cor do rodapé */
+    background-color: #4A287C; /* Cor da barra de navegação */
     padding: 10px 0;
 }
 
@@ -96,68 +112,26 @@ main {
 }
 
 .active-icon {
-    transform: scale(1.3); /* Aumenta o tamanho do ícone ativo */
+    transform: scale(1.3); /* Ícone da página ativa */
 }
 
-.icon-btn a img {
+.icon-btn img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
 }
 
-/* Estilo da página de configurações */
-.settings-page {
-    padding: 20px;
-    text-align: center;
+/* Estilo da página ativa */
+.icon-btn.active img {
+    transform: scale(1.3); /* Aumenta o ícone da página ativa */
 }
 
-.toggle-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.toggle {
-    width: 60px;
-    height: 30px;
-}
-
-/* Estilo da página de perfil */
-.profile-page {
-    padding: 20px;
-    text-align: center;
-}
-
-.profile-card {
-    background-color: #48277B; /* Cor do fundo do cartão de perfil */
+::-webkit-scrollbar-thumb {
+    background-color: #6B269B;
     border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
 }
 
-.profile-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-.profile-info p {
-    margin: 10px 0;
-}
-
-.logout-btn {
-    background-color: #EFD921; /* Cor do botão de logout */
-    color: #321450;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.logout-btn:hover {
-    transform: scale(1.05);
-}
