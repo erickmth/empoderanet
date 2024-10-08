@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmpoderaNet - Perfil</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -13,19 +12,28 @@
     </header>
 
     <main>
-        <section class="profile-card">
-            <img src="sua_imagem_perfil.png" alt="Imagem do Perfil">
-            <p>Nome de usuário</p>
-            <p>123.456.789-01</p>
+        <section class="profile-page">
+            <div class="profile-card">
+                <img src="perfil-icon.png" alt="Imagem perfil">
+                <div class="profile-info">
+                    <p>Nome do Usuário</p>
+                    <p>123.456.789-01</p>
+                </div>
+            </div>
+            <button class="logout-btn">Encerrar Sessão</button>
         </section>
-
-        <button class="logout">Encerrar Sessão</button>
     </main>
 
     <nav class="bottom-nav">
-        <a href="config.html" class="settings"><i class="fas fa-cog"></i></a>
-        <a href="index.html" class="home"><i class="fas fa-home"></i></a>
-        <a href="perfil.html" class="profile active"><i class="fas fa-user"></i></a>
+        <button class="icon-btn">
+            <img src="config-icon.png" alt="Configurações" class="icon">
+        </button>
+        <button class="icon-btn">
+            <img src="home-icon.png" alt="Home" class="icon">
+        </button>
+        <button class="icon-btn active">
+            <img src="perfil-icon.png" alt="Perfil" class="icon active-icon">
+        </button>
     </nav>
 </body>
 </html>
