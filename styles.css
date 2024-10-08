@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #40006c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+header h1 span {
+    display: block;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.event-card {
+    background-color: #6200a1;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.event-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.event-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.event-card button {
+    background-color: #a300ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.event-card button:hover {
+    background-color: #c400ff;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 15px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bottom-nav button {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #a300ff;
+    transition: color 0.3s;
+}
+
+.bottom-nav button:hover {
+    color: #6200a1;
+}
+
+.bottom-nav button.active {
+    color: #6200a1;
+}
+
+.settings i,
+.home i,
+.profile i {
+    font-size: 1.5rem;
+}
