@@ -40,19 +40,23 @@ main {
     align-items: center;
 }
 
+/* Responsividade do cartão */
 .event-card {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 80%;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima para telas grandes */
+    padding: 10px;
 }
 
 .card {
     background-color: #481F74; /* Fundo dos cartões */
     border-radius: 20px;
     width: 100%;
+    max-width: 400px; /* Limita o tamanho máximo dos cartões */
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
@@ -133,5 +137,69 @@ main {
 ::-webkit-scrollbar-thumb {
     background-color: #6B269B;
     border-radius: 10px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8em;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h1#subtext {
+        font-size: 0.9em;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h1#subtext {
+        font-size: 0.8em;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
 }
 
