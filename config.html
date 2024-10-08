@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmpoderaNet - Configurações</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -13,19 +12,32 @@
     </header>
 
     <main>
-        <section class="config-card">
-            <h2>Página de Configuração</h2>
-            <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider green"></span>
-            </label>
+        <section class="settings-page">
+            <div class="toggle-container">
+                <label>Página de Configuração</label>
+                <input type="checkbox" class="toggle">
+            </div>
+            <div class="toggle-container">
+                <label>Página de Configuração</label>
+                <input type="checkbox" class="toggle" checked>
+            </div>
+            <div class="toggle-container">
+                <label>Página de Configuração</label>
+                <input type="checkbox" class="toggle">
+            </div>
         </section>
     </main>
 
     <nav class="bottom-nav">
-        <a href="config.html" class="settings active"><i class="fas fa-cog"></i></a>
-        <a href="index.html" class="home"><i class="fas fa-home"></i></a>
-        <a href="perfil.html" class="profile"><i class="fas fa-user"></i></a>
+        <button class="icon-btn active">
+            <img src="config-icon.png" alt="Configurações" class="icon active-icon">
+        </button>
+        <button class="icon-btn">
+            <img src="home-icon.png" alt="Home" class="icon">
+        </button>
+        <button class="icon-btn">
+            <img src="perfil-icon.png" alt="Perfil" class="icon">
+        </button>
     </nav>
 </body>
 </html>
